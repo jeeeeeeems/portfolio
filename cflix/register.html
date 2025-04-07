@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CFlix</title>
+        <link rel="stylesheet" href="register.css">
+        <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    </head>
+
+    <body>
+        <div class="preloader">
+            <img class="logo" src="cflix.png" alt="Loading" height="100">
+        </div>
+
+        <div class="box formbox">
+            <header>
+                <div class="logo">
+                    C <span>Flix</span>
+                </div>
+                Sign Up
+            </header>
+
+            <form action="" method="post">
+                <div class="formgroup">
+                    <div class="fieldinput">
+                        <span class="inputuser">
+                            <i class="mdi mdi-account"></i>
+                        </span>
+                        <input type="text" id="username" name="username" class="form-control" required placeholder="Enter Username" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="formgroup">
+                    <div class="fieldinput">
+                        <span class="inputuser">
+                            <i class="mdi mdi-email"></i>
+                        </span>
+                        <input type="text" id="email" name="email" class="form-control" required placeholder="Enter email" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="formgroup">
+                    <div class="fieldinput">
+                        <span class="inputuser">
+                            <i class="mdi mdi-lock"></i>
+                        </span>
+                        <input type="password" id="password" name="password" class="form-control" required placeholder="Enter Password" autocomplete="off">
+                        <span class="inputuser">
+                            <input type="checkbox" id="togglePasswordCheckbox" class="toggle-password-checkbox">
+                            <label for="togglePasswordCheckbox">
+                                <i class="mdi mdi-eye" id="togglePasswordIcon"></i>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="formgroup">
+                    <div class="fieldinput">
+                        <span class="inputuser">
+                            <i class="mdi mdi-lock"></i>
+                        </span>
+                        <input type="password" id="password2" name="password2" class="form-control" required placeholder="Enter Password" autocomplete="off">
+                        <span class="inputuser">
+                            <input type="checkbox" id="togglePasswordCheckbox2" class="toggle-password-checkbox2">
+                            <label for="togglePasswordCheckbox2">
+                                <i class="mdi mdi-eye" id="togglePasswordIcon2"></i>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+
+                    <button type="submit" id="login" class="btn btn-login mb-2">Login</button>
+
+                <div class="links">
+                    Already a member? <a href="login.html" style="color: #B76E76;"> Sign In</a>
+                </div>
+            </form>
+        </div>
+    
+
+        <script>
+            document.getElementById('togglePasswordCheckbox').addEventListener('change', function() {
+                const passwordField = document.getElementById('password');
+                if (this.checked) {
+                    passwordField.type = 'text';
+                } else {
+                    passwordField.type = 'password';
+                }
+            });
+        </script>
+
+        <script>
+            document.getElementById('togglePasswordCheckbox2').addEventListener('change', function() {
+                const passwordField = document.getElementById('password2');
+                if (this.checked) {
+                    passwordField.type = 'text';
+                } else {
+                    passwordField.type = 'password2';
+                }
+            });
+        </script>
+    </body>
+</html>

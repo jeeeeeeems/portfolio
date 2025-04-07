@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-padding: 2rem;
+}
+
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1C1C1C;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    animation: hidePreloader 1s ease forwards 1.0s
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.logo {
+    animation: shake 0.3s;
+    animation-iteration-count: 2;
+}
+
+@keyframes hidePreloader {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+.content {
+    display: none;
+}
+
+.preloader[style*="visibility: hidden"] ~ .content {
+    display: block;
+}
+
+
+body {
+    background: #1C1C1C;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.box {
+    background: #1C1C1C;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 #E0BFBB,
+                0 32px 64px -48px #E0BFBB
+}
+
+.formbox {
+    width: 450px;
+    margin: 0px 10px;
+}
+
+.formbox header {
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #B76E79;
+}
+
+
+.logo {
+    text-align: center;
+    font-size: 5rem;
+    color: #E0BFBB;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
+    text-align: center;
+    align-items: center;
+}
+
+.logo span {
+    text-size-adjust: 25px;
+    text-align: center;
+    align-items: center;
+    color: #B76E79;
+}
+
+.formgroup {
+    margin-bottom: 20px;
+}
+
+.fieldinput {
+    display: flex;
+    align-items: center;
+    border: 1px solid #E0BFBB;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.inputuser {
+    background-color: #1C1C1C;
+    color: #E0BFBB;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#username {
+    height: 100%;
+    width: 85%;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    background-color: #1C1C1C;
+    color: #E0BFBB;
+    border: 1px solid #1C1C1C;
+}
+
+#password {
+    height: 100%;
+    width: 85%;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    background-color: #1C1C1C;
+    color: #B76E79;
+    border: 1px solid #1C1C1C;
+}
+
+.form-control {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn-login {
+    height: 35px;
+    width: 100%;
+    background-color: #B76E79;
+    border: 0;
+    border-radius: 5px;
+    color: #1C1C1C;
+    font-size: 15px;
+    cursor: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 5px;
+    padding-top: 0px 10px;
+}
+
+.btn-login:hover {
+    background-color: #E0BFBB;
+}
+
+.links {
+    text-align: center;
+    color: #E0BFBB;
+    margin-bottom: 5px;
+}
+
+.toggle-password-checkbox {
+    display: none;
+}
+
+.toggle-password-checkbox + label .mdi {
+    pointer-events: none;
+}
