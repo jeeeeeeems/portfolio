@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; 
+    line-height: 1.6;
 }
 
 .preloader {
@@ -44,7 +45,7 @@ body {
 }
 
 section {
-    padding: 80px 0;
+    padding: 80px 5vw;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -315,10 +316,14 @@ section:target {
 
 .port-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
 .port-item {
@@ -350,7 +355,7 @@ section:target {
 
 .port-item p {
     font-size: 1rem;
-    color: #555;
+    color: gray;
     margin-bottom: 15px;
 }
 
@@ -393,12 +398,13 @@ section:target {
 @media (max-width: 768px) {
     .port-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .port-item {
-        width: 90%;
+        width: 80%;
         max-width: 400px;
-        height: 350px;
+        height: auto;
     }
 }
 
@@ -674,60 +680,5 @@ input::placeholder, textarea::placeholder {
         width: 90%;
     }
 }
-
-
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .heading h2, .heading h3 {
-        font-size: 6vw;
-    }
-
-    .port-container {
-        flex-direction: column;
-    }
-
-    .port-item {
-        width: 80%;
-        max-width: 350px;
-        height: auto;
-    }
-
-    .abtimg img {
-        width: 40vw;
-        height: 40vw;
-    }
-
-    .abtcontent h2 {
-        font-size: 2rem;
-    }
-
-    .abtcontent p {
-        font-size: 1rem;
-    }
-
-    .cont-form input,
-    .cont-form textarea {
-        font-size: 1rem;
-    }
-}
-
-.navbar ul li a.active {
-    background: palevioletred;
-    color: palegoldenrod;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-
-
-
-
-
-
 
 
